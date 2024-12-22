@@ -62,3 +62,51 @@ answer_ = nsearch(fH, dfH, x0, tol)
 print(answer_[:3])
 answer_ = nsearch(fR, dfR, x0, tol)
 print(answer_[:3]) """
+
+# ===== Work 8. Test Barzilai-Borwein search
+""" from multidimensional_methods.work8_barzilai_borwein import bbsearch
+x0 = np.array([[2], [-1]])
+tol = 1e-9
+answer_ = bbsearch(fR, dfR, x0, tol)
+print(answer_[:3]) """
+
+# ===== Work 9. Test Polak-Ribiere search
+""" from multidimensional_methods.work9_polak_ribiere import prsearch
+x0 = np.array([[1.0], [0.0]])
+tol = 1e-9
+answer = prsearch(fH, dfH, x0, tol)
+print(answer[:3])
+x0 = np.array([[-2], [0]])
+tol = 1e-9
+answer = prsearch(fR, dfR, x0, tol)
+print(answer[:3]) """
+
+# ===== Work 10. Test Davidon-Fletcher-Powell search
+""" from multidimensional_methods.work10_davidon_fletcher_powell import dfpsearch
+x0 = np.array([[1.0], [0.0]])
+tol = 1e-9
+answer = dfpsearch(fH, dfH, x0, tol)
+print(answer[:3])
+x0 = np.array([[-3], [-3]])
+tol = 1e-9
+answer = dfpsearch(fR, dfR, x0, tol)
+print(answer[:3]) """
+
+# ===== Work 11. Test Trust regions search
+""" from multidimensional_methods.work11_trust_regions import trustreg
+x0 = np.array([[2.0], [1.0]])
+tol = 1e-3
+answer = trustreg(fH, dfH, x0, tol)
+print(answer[:3])
+print("Rosenbrock function:")
+x0 = np.array([[-1], [-1]])
+tol = 1e-3
+answer = trustreg(fR, dfR, x0, tol)
+print(answer[:3]) """
+
+# ===== Work 12. Test Nesterev accelerated gradient descent
+from multidimensional_methods.work12_nesterev_gradient import nagsearch
+x0 = np.array([[0.0], [1.0]])
+tol = 1e-3
+[xmin, f, neval, coords] = nagsearch(fH, dfH, x0, tol)
+print(xmin, f, neval)
