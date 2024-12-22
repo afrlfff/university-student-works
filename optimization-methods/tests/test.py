@@ -55,10 +55,10 @@ answer = sdsearch(fR, dfR, x0, tol)
 print(answer[:3]) """
 
 # ===== Work 7. Test multidimensional newton search
-from multidimensional_methods.work7_newton_search import nsearch
+""" from multidimensional_methods.work7_newton_search import nsearch
 x0 = np.array([[-2.0], [-2.0]])
 tol = 1e-3
 answer_ = nsearch(fH, dfH, x0, tol)
 print(answer_[:3])
 answer_ = nsearch(fR, dfR, x0, tol)
-print(answer_[:3])
+print(answer_[:3]) """
