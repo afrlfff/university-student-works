@@ -1,0 +1,6 @@
+3 10
+char NAME_1.1 [20], char NAME_1.2[10][4];
+unsigned NAME_2[100];
+double NAME_3.1[5], float NAME_3.2 [55][2];
+int NAME_4[4];
+int NAME_5 [5][23];

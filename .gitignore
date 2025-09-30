@@ -1,0 +1,50 @@
+# ===== My own ignore files ===== #
+
+2year-algorithms-and-data-structures/lab_4_text_compressors/bin
+2year-algorithms-and-data-structures/lab_4_text_compressors/input/txt/enwik7.txt
+2year-algorithms-and-data-structures/lab_4_text_compressors/input/raw/
+!2year-algorithms-and-data-structures/lab_4_text_compressors/input/raw/.gitkeep
+2year-algorithms-and-data-structures/lab_4_text_compressors/output/saved_results/
+2year-algorithms-and-data-structures/lab_4_text_compressors/output/encoded/
+!2year-algorithms-and-data-structures/lab_4_text_compressors/output/encoded/*.gitkeep
+2year-algorithms-and-data-structures/lab_4_text_compressors/output/decoded/
+!2year-algorithms-and-data-structures/lab_4_text_compressors/output/decoded/*.gitkeep
+
+2year-algorithms-and-data-structures/lab_5_jpeg_compressor/input/raw
+!2year-algorithms-and-data-structures/lab_5_jpeg_compressor/input/raw/.gitkeep
+2year-algorithms-and-data-structures/lab_5_jpeg_compressor/compressed/
+!2year-algorithms-and-data-structures/lab_5_jpeg_compressor/compressed/.gitkeep
+2year-algorithms-and-data-structures/lab_5_jpeg_compressor/output/
+!2year-algorithms-and-data-structures/lab_5_jpeg_compressor/output/.gitkeep
+
+3year-digital-signal-processing/Lab_1/results/
+
+4year-computer-vision-basics/input_imgs/
+4year-computer-vision-basics/output_imgs/
+
+# ===== Visual Studio ignore files ===== #
+
+x64/
+obj/
+bin/
+.vs/
+*.vcxproj
+*.filters
+*.user
+*csproj
+*.exe
+
+# ===== Python ignore files ===== #
+
+__pycache__/
+tempCodeRunnerFile.py
+
+# ===== VS Code ignore files ===== #
+
+.vscode/
+
+# ===== Git ignore files ===== #
+
+.git/
+
+# ============================ #

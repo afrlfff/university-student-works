@@ -1,0 +1,39 @@
+Фролов Александр 2302.
+
+Считанные элементы из файла in1.txt:
+	aaaaa --> aaa --> NULL
+	|
+	V
+	bbb --> NULL
+	|
+	V
+	ccccc --> ccc --> NULL
+	|
+	V
+	NULL
+
+Считанные элементы из файла in2.txt:
+	aaaaa --> aaa --> NULL
+	|
+	V
+	bbb --> NULL
+	|
+	V
+	ccccc --> ccc --> NULL
+	|
+	V
+	NULL
+
+Считанные элементы из файла in3.txt:
+	aaaaa --> aaa --> NULL
+	|
+	V
+	bbb --> NULL
+	|
+	V
+	ccccc --> ccc --> NULL
+	|
+	V
+	NULL
+
+Ответ: нет
