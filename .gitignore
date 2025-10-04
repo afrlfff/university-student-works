@@ -28,10 +28,7 @@ x64/
 obj/
 bin/
 .vs/
-*.vcxproj
-*.filters
 *.user
-*csproj
 *.exe
 
 # ===== Python ignore files ===== #
