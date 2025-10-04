@@ -47,4 +47,8 @@ tempCodeRunnerFile.py
 
 .git/
 
+# ===== GowinEDA ignore files ===== #
+
+impl/
+
 # ============================ #

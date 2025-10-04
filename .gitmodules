@@ -1,0 +1,3 @@
+[submodule "3year-computer-networks/course-work-lan-scanner"]
+	path = 3year-computer-networks/course-work-lan-scanner
+	url = https://github.com/afrlfff/lan-scanner-with-gui.git
