@@ -1,0 +1,35 @@
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//Tool Version: V1.9.9.03 Education (64-bit)
+//Part Number: GW1NR-LV9QN88PC6/I5
+//Device: GW1NR-9
+//Device Version: C
+//Created Time: Wed 10 08 21:11:09 2025
+
+IO_LOC "digits[3]" 74;
+IO_PORT "digits[3]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "digits[2]" 77;
+IO_PORT "digits[2]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "digits[1]" 30;
+IO_PORT "digits[1]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "digits[0]" 28;
+IO_PORT "digits[0]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[7]" 75;
+IO_PORT "segments[7]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[6]" 29;
+IO_PORT "segments[6]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[5]" 26;
+IO_PORT "segments[5]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[4]" 39;
+IO_PORT "segments[4]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[3]" 36;
+IO_PORT "segments[3]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[2]" 76;
+IO_PORT "segments[2]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[1]" 27;
+IO_PORT "segments[1]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "segments[0]" 25;
+IO_PORT "segments[0]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS18 PULL_MODE=UP BANK_VCCIO=1.8;
