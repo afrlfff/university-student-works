@@ -2,46 +2,37 @@ from pathlib import Path
 import os
 import shutil
 import numpy as np
-from input_functions import lorenz
-from integrator import Integrator, IntegratorCacher
+from include.input_functions import lorenz
+from include.utils import float_to_decimal_str
+from modules.integrate import ODESolver
 
 # ==================================================================================================== #
 
 def main() -> int:
     # init variables
     f = lorenz
-    parameters = (10, 28, 8/3)
-    tmin = 0; tmax = 100; dt=0.01
+    args = (10, 28, 8/3)
+    tmin = 0; tmax = 10; dt=0.01
     init_conditions = [1.0, 1.0, 1.0]
 
-    # init integrator
-    integrator = Integrator(
-        lambda state : f(state=state, parameters=parameters), 
-        tmin, tmax, dt, init_conditions
-        )
-    
-    # init cacher
-    cache_dir = Path(__file__) / '..' / '..' / 'cache'
-    cacher = IntegratorCacher(cache_dir)
+    # init solver
+    solver = ODESolver(f, args, tmin, tmax, dt, init_conditions)
 
     # init results directory
-    results_dir = Path(__file__) / '..' /'..' / 'results'
-    if os.path.exists(results_dir):
-        shutil.rmtree(results_dir)
-    os.makedirs(results_dir)
+    results_dir = Path(__file__) / '..' / '..' / 'results'
+    target_dir = results_dir / f"{int(tmin)}_{int(tmax)}_{float_to_decimal_str(dt).replace('.', '-')}"
+
+    if os.path.exists(target_dir):
+        shutil.rmtree(target_dir)
+    os.makedirs(target_dir)
 
     # run simulations
-    for method in ['euler-cromer', 'euler', 'runge-kutta-2', 'runge-kutta-4', 'midpoint', 'cd-lorenz']:
-    #for method in ['runge-kutta-2']:
-        integrator.set_method(method)
-
-        result = cacher.get(integrator)
-        if result is None:
-            result = integrator.run()
-            cacher.save(integrator=integrator, result=result)
+    for method in ['euler', 'euler-cromer', 'rk-4', 'midpoint', 'cd-lorenz']:
+        # solve
+        result = solver.solve(method)
     
         # save results
-        np.save(results_dir / f"{method}.npy", result, allow_pickle=False)
+        np.save(target_dir / f"{method}.npy", result, allow_pickle=False)
 
 
     return 0

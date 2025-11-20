@@ -2,7 +2,7 @@ import numpy as np
 
 # ================================================================================
 
-def euler_explicit(df, t, init_conditions):
+def euler(df, t, init_conditions):
     y = np.zeros( (len(t), len(init_conditions)) )
     
     y[0] = init_conditions
@@ -10,23 +10,6 @@ def euler_explicit(df, t, init_conditions):
         dt = t[i] - t[i-1]
         y[i] = y[i-1] + dt * df(y[i-1])
     
-    return y
-
-# ================================================================================
-
-def runge_kutta_2(df, t, init_conditions):
-    y = np.zeros((len(t), len(init_conditions)))
-    y[0] = init_conditions
-
-    for i in range(1, len(t)):
-        dt = t[i] - t[i-1]
-
-        k1 = df(y[i-1])
-        y_mid = y[i-1] + (dt / 2) * k1
-        k2 = df(y_mid)
-
-        y[i] = y[i-1] + dt * k2
-
     return y
 
 # ================================================================================
@@ -55,14 +38,14 @@ def midpoint(df, t, init_conditions):
     y[0] = init_conditions
 
     for i in range(1, len(t)):
-        h = t[i] - t[i-1]
+        dt = t[i] - t[i-1]
         y_prev = y[i-1]
 
         k1 = df(y_prev)
-        y_mid = y_prev + (h / 2) * k1
+        y_mid = y_prev + (dt / 2) * k1
         k2 = df(y_mid)
 
-        y[i] = y_prev + h * k2
+        y[i] = y_prev + dt * k2
 
     return y
 
@@ -73,13 +56,13 @@ def euler_cromer(df, t, init_conditions):
     y[0] = init_conditions
 
     for i in range(1, len(t)):
-        h = t[i] - t[i-1]
+        dt = t[i] - t[i-1]
         y_prev = y[i-1].copy()
         y_curr = y_prev.copy()
 
         for j in range(len(init_conditions)):
             derivs = df(y_curr)
-            y_curr[j] = y_prev[j] + h * derivs[j]
+            y_curr[j] = y_prev[j] + dt * derivs[j]
 
         y[i] = y_curr
 
@@ -87,12 +70,12 @@ def euler_cromer(df, t, init_conditions):
 
 # ================================================================================
 
-def cd_lorenz(t, init_conditions, params):
+def cd_lorenz(t, init_conditions, args):
     n = len(t)
-    y = np.zeros((n, len(init_conditions)))
+    y = np.zeros((n, len(args)))
     y[0] = init_conditions
 
-    sigma, rho, beta = params
+    sigma, rho, beta = args
 
     dt = t[1] - t[0]
     s = 0.5

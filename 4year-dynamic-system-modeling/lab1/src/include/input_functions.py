@@ -2,9 +2,9 @@ import numpy as np
 
 # ================================================================================
 
-def chen(state, parameters):
+def chen(state, args):
     x, y, z = state
-    a, b, c = parameters
+    a, b, c = args
 
     dx = a*(y - x)
     dy = (c - a)*x - x*z + c*y
@@ -22,9 +22,9 @@ def chen(state, parameters):
 
 # ================================================================================
 
-def lorenz(state, parameters):
+def lorenz(state, args):
     x, y, z = state
-    sigma, rho, beta = parameters
+    sigma, rho, beta = args
 
     dx = sigma * (y - x)
     dy = x * (rho - z) - y
