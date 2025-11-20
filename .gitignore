@@ -22,7 +22,6 @@
 4year-computer-vision-basics/input_imgs/
 4year-computer-vision-basics/output_imgs/
 
-4year-dynamic-system-modeling/lab1/cache/
 4year-dynamic-system-modeling/lab1/results/
 
 # ===== Visual Studio ignore files ===== #
@@ -50,6 +49,8 @@ tempCodeRunnerFile.py
 # ===== GowinEDA ignore files ===== #
 
 impl/
+*_tmp.v
+*.mod
 
 # ===== MircoCap ignore files ===== #
 
@@ -59,5 +60,6 @@ impl/
 *.DNO
 *.TNO
 *.ANO
+*.DDNO
 
 # ============================ #
