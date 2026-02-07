@@ -1,0 +1,18 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/bram_rw_controller.v" type="file.verilog" enable="1"/>
+        <File path="src/bram_sp_init/bram_sp_init.v" type="file.verilog" enable="1"/>
+        <File path="src/seven_segment_indicator.v" type="file.verilog" enable="1"/>
+        <File path="src/seven_segment_indicator_binary.v" type="file.verilog" enable="1"/>
+        <File path="src/seven_segment_timer.v" type="file.verilog" enable="1"/>
+        <File path="src/test_bram_reader.v" type="file.verilog" enable="1"/>
+        <File path="src/test_bram_writer.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/Lab4_BRAM.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>
