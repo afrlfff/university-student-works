@@ -28,6 +28,20 @@
 4year-dynamic-system-modeling/results/
 4year-dynamic-system-modeling/old/
 
+4year-circuit-modeling-automation/preparing/
+4year-circuit-modeling-automation/images/
+4year-circuit-modeling-automation/course_dataset/
+
+4year-data-visualization/content/
+4year-data-visualization/*.html
+4year-data-visualization/lib
+4year-data-visualization/setup_venv.bat
+4year-data-visualization/requirements.txt
+
+temp.ipynb
+temp.py
+venv
+
 # ===== Visual Studio ignore files ===== #
 
 x64/

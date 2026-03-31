@@ -1,5 +1,6 @@
 import numpy as np
 from numpy.typing import NDArray
+from scipy.signal import find_peaks
 from tqdm import tqdm # for debug
 
 from modules.systems.typing import RHSFunc
@@ -35,16 +36,18 @@ def continuation1d(
         # integrate transient + sample
         y = solve_ode(f, params_current, n_transient + n_record, h, state, solver=solver)
 
+        # FORWARD CONTINUATION
+        state = y[-1].copy()
+
         # remove transient + extract target variable
         y = y[n_transient :, var_idx]
         
         # find all local maxima
-        y_maxima = y[1:-1][(y[1:-1] > y[:-2]) & (y[1:-1] > y[2:])]
+        peak_idxs, _ = find_peaks(y)
+        y_maxima = y[peak_idxs]
+        # y_maxima = y[1:-1][(y[1:-1] > y[:-2]) & (y[1:-1] > y[2:])]
 
         # save result
         result[i] = (y_maxima) if (y_maxima.size > 0) else (np.nan)
-
-        # FORWARD CONTINUATION
-        state = y[-1].copy()
 
     return param_values, result
