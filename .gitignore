@@ -1,48 +1,9 @@
-# ===== My own ignore files ===== #
-
-2year-algorithms-and-data-structures/lab_4_text_compressors/bin
-2year-algorithms-and-data-structures/lab_4_text_compressors/input/txt/enwik7.txt
-2year-algorithms-and-data-structures/lab_4_text_compressors/input/raw/
-!2year-algorithms-and-data-structures/lab_4_text_compressors/input/raw/.gitkeep
-2year-algorithms-and-data-structures/lab_4_text_compressors/output/saved_results/
-2year-algorithms-and-data-structures/lab_4_text_compressors/output/encoded/
-!2year-algorithms-and-data-structures/lab_4_text_compressors/output/encoded/*.gitkeep
-2year-algorithms-and-data-structures/lab_4_text_compressors/output/decoded/
-!2year-algorithms-and-data-structures/lab_4_text_compressors/output/decoded/*.gitkeep
-
-2year-algorithms-and-data-structures/lab_5_jpeg_compressor/input/raw
-!2year-algorithms-and-data-structures/lab_5_jpeg_compressor/input/raw/.gitkeep
-2year-algorithms-and-data-structures/lab_5_jpeg_compressor/compressed/
-!2year-algorithms-and-data-structures/lab_5_jpeg_compressor/compressed/.gitkeep
-2year-algorithms-and-data-structures/lab_5_jpeg_compressor/output/
-!2year-algorithms-and-data-structures/lab_5_jpeg_compressor/output/.gitkeep
-
-3year-digital-signal-processing/Lab_1/results/
-
-4year-computer-vision-basics/input_imgs/
-4year-computer-vision-basics/output_imgs/
-4year-computer-vision-basics/input_vids/
-4year-computer-vision-basics/output_vids/
-4year-computer-vision-basics/cascades/
-
-4year-dynamic-system-modeling/results/
-4year-dynamic-system-modeling/old/
-
-4year-circuit-modeling-automation/preparing/
-4year-circuit-modeling-automation/images/
-4year-circuit-modeling-automation/course_dataset/
-
-4year-data-visualization/content/
-4year-data-visualization/*.html
-4year-data-visualization/lib
-4year-data-visualization/setup_venv.bat
-4year-data-visualization/requirements.txt
+# ===== Specific ===== #
 
 temp.ipynb
 temp.py
-venv
 
-# ===== Visual Studio ignore files ===== #
+# ===== Visual Studio ===== #
 
 x64/
 obj/
@@ -51,26 +12,28 @@ bin/
 *.user
 *.exe
 
-# ===== Python ignore files ===== #
+# ===== Python ===== #
 
+venv/
+.venv/
 __pycache__/
 tempCodeRunnerFile.py
 
-# ===== VS Code ignore files ===== #
+# ===== VS Code ===== #
 
-.vscode/
+.vscode/settings.json
 
-# ===== Git ignore files ===== #
+# ===== Git ===== #
 
 .git/
 
-# ===== GowinEDA ignore files ===== #
+# ===== GowinEDA ===== #
 
 impl/
 *_tmp.v
 *.mod
 
-# ===== MircoCap ignore files ===== #
+# ===== MircoCap ===== #
 
 *.bak_cir
 *inx

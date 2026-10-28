@@ -1,3 +1,10 @@
-.vscode
+.vscode/
 .src/image_utils/__pycache__
 .src/jpeg_compressor/__pycache__
+
+/input/raw/*
+!/input/raw/.gitkeep
+/compressed/*
+!/compressed/.gitkeep
+/output/*
+!/output/.gitkeep

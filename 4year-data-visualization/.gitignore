@@ -1,0 +1,5 @@
+/content/
+/*.html
+/lib/
+/setup_venv.bat
+/requirements.txt
