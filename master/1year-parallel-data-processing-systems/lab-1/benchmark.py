@@ -12,7 +12,7 @@ REPEATS = 30
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
-EXECUTABLE = SCRIPT_DIR / "../.build/lab-1/mpi_app_1.exe"
+EXECUTABLE = SCRIPT_DIR / "../.build/lab-1/Release/mpi_app_1.exe"
 RESULTS_FILE = SCRIPT_DIR / "./results/raw.csv"
 
 
@@ -41,7 +41,7 @@ def main():
                             str(processes),
                             str(EXECUTABLE),
                             str(task),
-                            "benchmark",
+                            "--benchmark",
                             str(messages),
                         ]
 

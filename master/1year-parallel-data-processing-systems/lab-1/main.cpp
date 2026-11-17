@@ -7,12 +7,12 @@
 bool validateInput(int argc, char* argv[], std::string *errorMessage)
 {
     if (argc < 2) {
-        if (errorMessage) *errorMessage = "Too few arguments. Usage: program.exe <1|2> [benchmark]";
+        if (errorMessage) *errorMessage = "Too few arguments. Usage: program.exe <1|2> [--benchmark <message_count>]";
         return false;
     }
 
     if (argc > 4) {
-        if (errorMessage) *errorMessage = "Too many arguments in argument list.";
+        if (errorMessage) *errorMessage = "Too many arguments in argument list.  Usage: program.exe <1|2> [--benchmark <message_count>]";
         return false;
     }
 
@@ -22,16 +22,13 @@ bool validateInput(int argc, char* argv[], std::string *errorMessage)
         return false;
     }
     
-    bool isBenchmark = false;
     if (argc > 2) {
         std::string argValue = std::string(argv[2]);
 
-        if (argValue != "benchmark") {
-            if (errorMessage) *errorMessage = "Incorrect 2nd argument value: " + argValue + ". Possible values: benchmark";
+        if (argValue != "--benchmark") {
+            if (errorMessage) *errorMessage = "Incorrect 2nd argument value: " + argValue + ". Possible values: --benchmark";
             return false;
         }
-
-        bool isBenchmark = true;
     }
 
     int messageCount = 1;

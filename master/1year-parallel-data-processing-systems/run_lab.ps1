@@ -4,7 +4,7 @@
     [int]$Cores = 4
 )
 
-$exePath = ".\.build\lab-$Lab\mpi_app_$Lab.exe"
+$exePath = ".\.build\lab-$Lab\Release\mpi_app_$Lab.exe"
 
 if (-not (Test-Path -Path $exePath -PathType Leaf)) {
     Write-Host "Исполняемый файл не найден! Выполните сборку соответствующей работы перед запуском." -ForegroundColor Red
