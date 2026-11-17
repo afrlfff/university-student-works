@@ -1,5 +1,4 @@
 .build/
-.venv/
-.vscode/settings.json
+.vscode/
 
-lab-1/results/
+lab-*/results/
